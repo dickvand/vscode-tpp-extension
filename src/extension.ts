@@ -199,7 +199,7 @@ function currentFilePath(){
             //file through filesystem.
             filedict.folder = filedict.fullPath.split(/\\[\w-]+\./)[0];
             //retrieve just the filename and the extension
-            filedict.filename = filedict.fullPath.match(/[\w-]+\.+\w+/g)[0];
+            filedict.filename = filedict.fullPath.match(/[\w-]+\.+\w+$/g)[0];
 
         } else {
             vscode.window.showErrorMessage('The active file needs to be saved before it can be run');
